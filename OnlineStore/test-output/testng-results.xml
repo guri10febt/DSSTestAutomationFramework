@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11720" started-at="2016-08-05T15:38:06Z" finished-at="2016-08-05T15:38:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11720" started-at="2016-08-05T15:38:06Z" finished-at="2016-08-05T15:38:17Z">
+      <class name="com.java.test.Execution">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.java.test.Execution@6d00a15d]" name="config" is-config="true" duration-ms="8290" started-at="2016-08-05T21:08:06Z" finished-at="2016-08-05T21:08:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config -->
+        <test-method status="PASS" signature="testcase1()[pri:0, instance:com.java.test.Execution@6d00a15d]" name="testcase1" duration-ms="3407" started-at="2016-08-05T21:08:14Z" finished-at="2016-08-05T21:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase1 -->
+        <test-method status="PASS" signature="CleanUp()[pri:0, instance:com.java.test.Execution@6d00a15d]" name="CleanUp" is-config="true" duration-ms="1" started-at="2016-08-05T21:08:17Z" finished-at="2016-08-05T21:08:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CleanUp -->
+      </class> <!-- com.java.test.Execution -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
