@@ -30,7 +30,18 @@ public abstract class PageListing extends TopNav{
 			
 		}
 
+	public CheckoutYourCartPageObject ClickGoToCheckoutButton() throws InterruptedException{
+		Thread.sleep(4000);
+		driver.findElement(By.linkText("Go to Checkout")).click();
+		return new CheckoutYourCartPageObject(driver);
+		
+	}
 	
+	public void ClickContinueShopping() throws InterruptedException{
+		Thread.sleep(4000);
+		driver.findElement(By.linkText("Continue Shopping")).click();
+		
+	}
 
 
 }
