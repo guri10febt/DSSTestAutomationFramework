@@ -14,7 +14,29 @@ public abstract class PageListing extends TopNav{
 		this.driver=driver;
 		
 	}
-	public void AddToCart(String args){
+	public String AddToCart(String args){
+		String ProductPrice = null;
+		WebElement List = driver.findElement(By.xpath("//*[@id='default_products_page_container']/div"));
+		List<WebElement> ProductList= List.findElements(By.xpath("//*[contains(@class, 'default_product_display product_view_')]"));
+		for(WebElement productSelected: ProductList){
+			if(productSelected.findElement(By.className("wpsc_product_title")).getText().equalsIgnoreCase(args)){
+				ProductPrice=productSelected.findElement(By.cssSelector(".currentprice.pricedisplay")).getText();
+			    System.out.println(ProductPrice);
+			    productSelected.findElement(By.name("Buy")).click();
+			}
+			
+		}
+		return ProductPrice;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	/*public void AddToCart(String args){
 		    int count=0;
 			WebElement List = driver.findElement(By.xpath("//*[@id='default_products_page_container']"));
 			List<WebElement> productslist = List.findElements(By.className("prodtitle"));
@@ -28,7 +50,7 @@ public abstract class PageListing extends TopNav{
 				count++;	
 			}
 			
-		}
+		}*/
 
 	public CheckoutYourCartPageObject ClickGoToCheckoutButton() throws InterruptedException{
 		Thread.sleep(4000);

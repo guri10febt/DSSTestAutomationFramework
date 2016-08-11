@@ -10,9 +10,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.java.pageobject.AccessorieslistingPageObject;
+import com.java.pageobject.CheckoutFinalPageObject;
 import com.java.pageobject.CheckoutInfoPageObject;
 import com.java.pageobject.CheckoutYourCartPageObject;
 import com.java.pageobject.HomepagePageObject;
+
+import junit.framework.Assert;
 
 public class Execution {
 	private WebDriver driver;
@@ -20,6 +23,7 @@ public class Execution {
 	private AccessorieslistingPageObject Accessories;
 	private CheckoutYourCartPageObject  CheckoutYourCart;
 	private CheckoutInfoPageObject CheckoutInfo;
+	private CheckoutFinalPageObject Checkoutfinal;
 	@BeforeTest
 	public void config(){
 		System.setProperty("webdriver.chrome.driver","C:\\AllJarFiles\\chromedriver.exe");
@@ -32,14 +36,16 @@ public class Execution {
 	@Test
 	public void testcase1() throws InterruptedException, AWTException{
 		
+		boolean flag;
 		Accessories=(AccessorieslistingPageObject) home.selectProduct("accessories");
 		System.out.println("Out of accessories");
-		Accessories.AddToCart("Apple TV");
+		String ProductPrice=Accessories.AddToCart("Apple TV");
+		System.out.println(ProductPrice);
 		CheckoutYourCart=Accessories.ClickGoToCheckoutButton();
 		CheckoutInfo=CheckoutYourCart.CheckoutYourCartPageContinue();
-		CheckoutInfo.enterAddressInfo();
-		
-		
+		Checkoutfinal=CheckoutInfo.enterAddressInfo();
+		flag=Checkoutfinal.calculateamount();
+		Assert.assertTrue(flag);
 	}
 	@AfterTest
 	public void CleanUp(){
