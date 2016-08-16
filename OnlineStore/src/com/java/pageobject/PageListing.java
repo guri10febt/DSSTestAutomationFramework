@@ -14,6 +14,12 @@ public abstract class PageListing extends TopNav{
 		this.driver=driver;
 		
 	}
+	
+	
+	
+
+	
+	//Add single product cart
 	public String AddToCart(String args){
 		String ProductPrice = null;
 		WebElement List = driver.findElement(By.xpath("//*[@id='default_products_page_container']/div"));
@@ -28,12 +34,6 @@ public abstract class PageListing extends TopNav{
 		}
 		return ProductPrice;
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	/*public void AddToCart(String args){

@@ -5,9 +5,9 @@
     <classes>
       <class name="com.java.test.Execution">
         <methods>
-          <include name="testcase1"/>
           <include name="CleanUp"/>
           <include name="config"/>
+          <include name="testcase2"/>
         </methods>
       </class> <!-- com.java.test.Execution -->
     </classes>

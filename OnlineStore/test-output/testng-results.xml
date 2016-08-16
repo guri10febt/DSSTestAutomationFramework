@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="65711" started-at="2016-08-09T15:12:05Z" finished-at="2016-08-09T15:13:11Z">
+  <suite name="Default suite" duration-ms="80979" started-at="2016-08-16T14:19:19Z" finished-at="2016-08-16T14:20:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="65711" started-at="2016-08-09T15:12:05Z" finished-at="2016-08-09T15:13:11Z">
+    <test name="Default test" duration-ms="80979" started-at="2016-08-16T14:19:19Z" finished-at="2016-08-16T14:20:40Z">
       <class name="com.java.test.Execution">
-        <test-method status="PASS" signature="config()[pri:0, instance:com.java.test.Execution@6d00a15d]" name="config" is-config="true" duration-ms="13727" started-at="2016-08-09T20:42:05Z" finished-at="2016-08-09T20:42:19Z">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.java.test.Execution@6d00a15d]" name="config" is-config="true" duration-ms="13810" started-at="2016-08-16T19:49:19Z" finished-at="2016-08-16T19:49:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method status="PASS" signature="testcase1()[pri:0, instance:com.java.test.Execution@6d00a15d]" name="testcase1" duration-ms="51959" started-at="2016-08-09T20:42:19Z" finished-at="2016-08-09T20:43:11Z">
+        <test-method status="PASS" signature="testcase2()[pri:0, instance:com.java.test.Execution@6d00a15d]" name="testcase2" duration-ms="66165" started-at="2016-08-16T19:49:32Z" finished-at="2016-08-16T19:50:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase1 -->
-        <test-method status="PASS" signature="CleanUp()[pri:0, instance:com.java.test.Execution@6d00a15d]" name="CleanUp" is-config="true" duration-ms="0" started-at="2016-08-09T20:43:11Z" finished-at="2016-08-09T20:43:11Z">
+        </test-method> <!-- testcase2 -->
+        <test-method status="PASS" signature="CleanUp()[pri:0, instance:com.java.test.Execution@6d00a15d]" name="CleanUp" is-config="true" duration-ms="981" started-at="2016-08-16T19:50:39Z" finished-at="2016-08-16T19:50:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CleanUp -->
