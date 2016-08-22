@@ -32,7 +32,7 @@ public abstract class PageListing extends TopNav{
 			}
 			
 		}
-		return ProductPrice;
+		return ProductPrice.substring(1, ProductPrice.length());
 	}
 	
 	

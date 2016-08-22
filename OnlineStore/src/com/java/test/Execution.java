@@ -50,14 +50,20 @@ public class Execution {
 	public void testcase2() throws InterruptedException, AWTException{
 		
 		boolean flag;
+		String AppleTVQuantity ="3";
+		String SennheiserRS120Auantity = "2";
 		Accessories=(AccessorieslistingPageObject) home.selectProduct("accessories");
 		System.out.println("Out of accessories");
-		String ProductPrice=Accessories.AddToCart("Apple TV");
+		String ProductPrice =Accessories.AddToCart("Apple TV");
 		Accessories.ClickContinueShopping();
-		String ProductPrice2=Accessories.AddToCart("Sennheiser RS 120");
+		String ProductPrice2 =Accessories.AddToCart("Sennheiser RS 120");
 		System.out.println(ProductPrice);
 		CheckoutYourCart=Accessories.ClickGoToCheckoutButton();
-		CheckoutYourCart.updateQuantity("Apple TV","3");
+		CheckoutYourCart.updateQuantity("Apple TV",AppleTVQuantity);
+		//CheckoutYourCart.updateQuantity("Sennheiser RS 120",SennheiserRS120Auantity);
+		CheckoutYourCart.calculateYourCart("Apple TV", ProductPrice,AppleTVQuantity );
+		//
+		//CheckoutYourCart.calculateYourCart("Sennheiser RS 120", ProductPrice2, SennheiserRS120Auantity);
 		CheckoutInfo=CheckoutYourCart.CheckoutYourCartPageContinue();
 		Checkoutfinal=CheckoutInfo.enterAddressInfo();
 		flag=Checkoutfinal.calculateamount();
