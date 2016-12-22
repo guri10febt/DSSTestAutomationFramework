@@ -8,11 +8,43 @@ import com.dss.test.core.utilities.Utility;
 public class HomePage {
 
 	private WebDriver driver;
-
+	
 	public HomePage(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, HomePageObject.class);
 	}
+
+	public boolean isISOLoginSuccess(String userName, String userPassword){
+
+			clickOnLoginTopNav().enterEmailId(userName).enterPassword(userPassword).clicklogin();
+			
+		return true;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	private HomePage clickOnLoginTopNav(){
@@ -21,13 +53,13 @@ public class HomePage {
 		return this;
 	}
 
-	private HomePage enterEmailId(){
-		Utility.enterData("guri10febf@gmail.com", HomePageObject.textBox_EmailId);
+	private HomePage enterEmailId(String emailId){
+		Utility.enterData(emailId, HomePageObject.textBox_EmailId);
 		return this;
 	}
 
-	private HomePage enterPassword(){
-		Utility.enterData("tribune1", HomePageObject.textBox_Password);
+	private HomePage enterPassword(String password){
+		Utility.enterData(password, HomePageObject.textBox_Password);
 		return this;
 	}
 
@@ -40,5 +72,7 @@ public class HomePage {
 		return this;
 
 	}
+
+
 
 }
